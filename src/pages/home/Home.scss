@@ -1,7 +1,10 @@
 .home{
-    background-color : rgb(50, 96, 104);
     text-align: left;
+    display: flex;
     .title {
         color: #000;
+    }
+    .homeContainer {
+        flex: 6;
     }
  }

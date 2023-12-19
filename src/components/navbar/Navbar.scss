@@ -4,12 +4,14 @@
     align-items: center;
     font-size: 15px;
     color: gray;
+    border-bottom: 2px solid rgb(179, 235, 235);
     .wrapper{
         width: 100%;
         padding: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+       
         .search{
             display: flex;
             align-items: center;

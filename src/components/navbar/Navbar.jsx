@@ -39,7 +39,7 @@ const Navbar = () => {
             <ChecklistRoundedIcon  className='icon'/>
           </div>
           <div className="item">
-            <img src=" https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="image" className="avatar" />
+            <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="image" className="avatar" />
           </div>
         </div>
       </div>

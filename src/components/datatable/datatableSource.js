@@ -11,7 +11,32 @@ export const userColumns =[
                 </div>
             );
 
-    }}
+    }},
+    {
+        field: "email",
+        headerName: "Email", 
+        width: 230,
+
+    },  
+    {
+        field: "age",
+        headerName: "Age", 
+        width: 100,
+
+    },
+    {
+        field: "status",
+        headerName: "Status", 
+        width: 160,
+        renderCell:(params) =>{
+            return (
+                <div className={`cellWidthStatus ${params.row.status}`}>
+                    {params.row.status}
+                </div>
+            )
+        }
+
+    },
      
 ];
 export const userRows =[
@@ -27,7 +52,7 @@ export const userRows =[
         id:2,
         username: "snow",
         img: "https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg",
-        status: "active",
+        status: "pending",
         email: "snw@gmail.com",
         age: 35,
     },
@@ -51,7 +76,7 @@ export const userRows =[
         id:5,
         username: "snow",
         img: "https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg",
-        status: "active",
+        status: "passive",
         email: "snw@gmail.com",
         age: 35,
     },

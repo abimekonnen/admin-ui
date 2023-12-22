@@ -10,12 +10,15 @@ import MonitorHeartSharpIcon from '@mui/icons-material/MonitorHeartSharp';
 import ManageSearchSharpIcon from '@mui/icons-material/ManageSearchSharp';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import ExitToAppRoundedIcon from '@mui/icons-material/ExitToAppRounded';
+import {Link} from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className = 'sidebar'>
       <div className="top">
-        <span className ="logo"> Admin</span>
+        <Link to="/" className='link'>
+          <span className ="logo"> Admin</span>
+        </Link>
       </div>
       <div className="center">
         <ul>
@@ -25,14 +28,18 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
-          <li>
-            <PeopleAltIcon className='icon'/>
-            <span>Users</span>
-          </li>
-          <li>
-            <ProductionQuantityLimitsIcon className='icon'/>
-            <span>Products</span>
-          </li> 
+          <Link to='/users' className='link'>
+            <li>
+              <PeopleAltIcon className='icon'/>
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to='/products' className='link'>
+            <li>
+              <ProductionQuantityLimitsIcon className='icon'/>
+              <span>Products</span>
+            </li> 
+          </Link>
           <li>
             <DvrRoundedIcon className='icon'/>
             <span>Orders</span>

@@ -8,13 +8,18 @@ import List from './pages/list/List.jsx';
 import Single from './pages/single/Single.jsx';
 import New from './pages/new/New.jsx';
 import { productInputs, userInputs } from './formSource.js';
-
+import './style/dark.scss';
+import { useContext } from 'react';
+import { darkModeContext } from './context/darkModeContext.js';
 
 function App() {
+
+  const {darkMode} = useContext(darkModeContext)
+
   return (
-    <div className="App">
+    <div className={darkMode? "app dark":"app"}>
       <Routes>
-        <Route index element = {<Home />}/>
+        <Route index element = {<Home  />}/>
         <Route path='login' element = {<Login />}/>
         <Route path='users'>
             <Route index element = {<List/>} />

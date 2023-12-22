@@ -1,4 +1,5 @@
 .home{
+    text-align: left;
     display: flex;
     .title {
         color: #000;
@@ -22,7 +23,7 @@
             .listTitle{
                 font-weight: 500;
                 color: gray;
-                margin-top: 15px;
+                margin-bottom: 15px;
             }
         }
 

@@ -1,0 +1,52 @@
+.app.dark{
+    background-color: #111;
+    color: rgb(196, 195, 195);
+
+    .chatGrid{
+        stroke: rgba(228, 228, 228, 0.219);
+    }
+    .table{
+      background-color: #111;
+      .tableCell{
+        color: rgb(196, 195, 195);
+      }  
+    }
+    .navbar{
+        color: rgb(196, 195, 195);
+    }
+.sidebar{
+    background-color: #111;
+    color: rgb(196, 195, 195);
+    .top{
+        .logo{
+            color: rgb(196, 195, 195);
+        }
+    } 
+    hr{
+        
+    }
+    ul{
+       li{
+        &:hover{
+            background-color: rgb(196, 195, 195);
+        }
+        .icon{
+            color: #231;
+        }
+       } 
+    }
+}
+.datatable{
+    .datagrid{
+        color: rgb(196, 195, 195);
+        border: none;
+        .viewButton,.deleteButton,.cellWithStatus{
+            color: rgb(196, 195, 195);
+            border: none;
+        }
+    }
+}
+input{
+    background-color: transparent;
+}
+}

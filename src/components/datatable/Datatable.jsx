@@ -2,22 +2,28 @@ import "./Datatable.scss"
 import  React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { userColumns, userRows } from "./datatableSource";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {useState} from 'react';
+
 
 const Datatable = () => {
+    const [data,setData] = useState(userRows);
+    const handleDelete =(id) =>{
+        setData(data.filter((item) => item.id !== id))
+    }
 
     const actionColum =[
         {
             field: "action",
             headerName: "Action",
             width: 200,
-            renderCell:()=>{
+            renderCell:(params)=>{
                 return(
                     <div className="cellAction">
                         <Link to="/users/test" style={{textDecoration:"none"}}>
                             <div className="viewButton">View</div>
                         </Link>
-                        <div className="deleteButton">Delete</div>
+                        <div className="deleteButton" onClick={() => handleDelete(params.row.id) }>Delete</div>
                     </div>
                 )
             }
@@ -34,7 +40,7 @@ const Datatable = () => {
             </div>
             <DataGrid
                 className="datagrid"
-                rows={userRows}
+                rows={data}
                 columns={userColumns.concat(actionColum)}
                 initialState={{
                 pagination: {

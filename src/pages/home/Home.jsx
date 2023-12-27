@@ -26,6 +26,30 @@ const Home = () => {
           <div className="listTitle">Latest Transaction</div>
           <Table/>
         </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transaction</div>
+          <Table/>
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transaction</div>
+          <Table/>
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transaction</div>
+          <Table/>
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transaction</div>
+          <Table/>
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transaction</div>
+          <Table/>
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transaction</div>
+          <Table/>
+        </div>
       </div>
     </div>
     

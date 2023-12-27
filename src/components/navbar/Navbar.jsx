@@ -7,13 +7,13 @@ import FullscreenRoundedIcon from '@mui/icons-material/FullscreenRounded';
 import NotificationAddRoundedIcon from '@mui/icons-material/NotificationAddRounded';
 import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineRounded';
 import ChecklistRoundedIcon from '@mui/icons-material/ChecklistRounded';
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import { darkModeContext } from '../../context/darkModeContext';
 
 const Navbar = () => {
 
   const {dispatch} = useContext(darkModeContext)
-
+  const [menuOpen,setMenuOpen] = useState(false);
   return (
     <div className = 'navbar' >
       <div className="wrapper">
@@ -21,7 +21,7 @@ const Navbar = () => {
           <input type="text" placeholder = "Search..." />
           <SearchRoundedIcon/>
         </div>
-        <div className="items">
+        <div  className={menuOpen? "items open" : "items"}>
           <div className="item">
             <LanguageRoundedIcon className='icon'/>
             English
@@ -46,6 +46,15 @@ const Navbar = () => {
           </div>
           <div className="item">
             <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="image" className="avatar" />
+          </div>
+          <div className="item">
+            <div className='menu' onClick={()=>
+              setMenuOpen(!menuOpen)
+              }>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
